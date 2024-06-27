@@ -1,5 +1,4 @@
-
-![Preview](https://raw.githubusercontent.com/blackrabbit17/nanoreactor/main/preview.gif)
+MAJORITY OF CODE WAS MADE BY ALAIN RICHARDT (https://github.com/blackrabbit17)
 
 ## Create a python virtual env and install dependencies
 ```
