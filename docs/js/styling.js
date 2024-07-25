@@ -12,7 +12,7 @@ function edge_color(weight) {
     else if(weight > 50) {
         return BURNT_ORANGE;
     }
-    else if(weight > 30) {
+    else if(weight > 25) {
         return MUSTARD_YELLOW;
     }
     else {
@@ -119,16 +119,16 @@ function default_style() {
             'style': {'width': 60, 'height': 60, 'font-size': 17}
         },
         {
-            'selector': '[weight > 30]',
-            'style': {'line-color': edge_color(30)}
+            'selector': '[weight > 25]',
+            'style': {'line-color': edge_color(26)}
         },
         {
             'selector': '[weight > 50]',
-            'style': {'line-color': edge_color(50)}
+            'style': {'line-color': edge_color(51)}
         },
         {
             'selector': '[weight > 70]',
-            'style': {'line-color': edge_color(70)}
+            'style': {'line-color': edge_color(71)}
         },
     ];
 }

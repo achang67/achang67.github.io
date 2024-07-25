@@ -69,22 +69,22 @@ function build_edges(sources, targets, energy_forward, energy_backward, R1, R2, 
             }
         );
 
-        if(build_edges) {
-            edges.push(
-                {
-                    data:
-                    {
-                        'id': 's_backward_' + sources[i] + '-' + 't_backward_' + targets[i],
-                        'source': targets[i],
-                        'target': sources[i],
-                        'weight': energy_backward[i],
-                        'energy_forward': energy_forward[i],
-                        'energy_backward': energy_backward[i],
-                        'classes': edge_class_name(R1[i], R2[i], R3[i], R4[i])
-                    }
-                }
-            );
-        }
+        //if(build_edges) {
+        //    edges.push(
+        //        {
+        //            data:
+        //            {
+        //                'id': 's_backward_' + sources[i] + '-' + 't_backward_' + targets[i],
+        //                'source': targets[i],
+        //                'target': sources[i],
+        //                'weight': energy_backward[i],
+        //                'energy_forward': energy_forward[i],
+        //                'energy_backward': energy_backward[i],
+        //                'classes': edge_class_name(R1[i], R2[i], R3[i], R4[i])
+        //            }
+        //        }
+        //    );
+        //}
     }
     //alert(5 + 6);
 
