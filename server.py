@@ -16,7 +16,7 @@ app.mount("/js", StaticFiles(directory="docs/js"), name="css")
 
 @app.get("/")
 def root():
-    with open(os.path.join("docs", "index.html")) as fh:
+    with open(os.path.join("tpmtd", "index.html")) as fh:
         data = fh.read()
     return Response(content=data, media_type="text/html")
 
