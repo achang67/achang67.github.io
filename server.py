@@ -9,9 +9,9 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-app.mount("/css", StaticFiles(directory="docs/css"), name="css")
-app.mount("/img", StaticFiles(directory="docs/img"), name="css")
-app.mount("/js", StaticFiles(directory="docs/js"), name="css")
+app.mount("/css", StaticFiles(directory="tpmtd/css"), name="css")
+app.mount("/img", StaticFiles(directory="tpmtd/img"), name="css")
+app.mount("/js", StaticFiles(directory="tpmtd/js"), name="css")
 
 
 @app.get("/")
