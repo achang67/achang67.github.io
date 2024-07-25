@@ -47,7 +47,7 @@ function build_nodes(nodes) {
     return nodes;
 }
 
-function build_edges(sources, targets, energy_forward, energy_backward, R1, R2, R3, R4) {
+function build_edges(sources, targets, energy_forward, energy_backward, G0, G1, G2, G3) {
     var edges = [];
     for (var i = 0; i < sources.length; i++) {
         edges.push(
@@ -60,11 +60,11 @@ function build_edges(sources, targets, energy_forward, energy_backward, R1, R2, 
                     'weight': energy_forward[i],
                     'energy_forward': energy_forward[i],
                     'energy_backward': energy_backward[i],
-                    'classes': edge_class_name(R1[i], R2[i], R3[i], R4[i]),
-                    'R1_val': R1[i],
-                    'R2_val': R2[i],
-                    'R3_val': R3[i],
-                    'R4_val': R4[i]
+                    'classes': edge_class_name(G0[i], G1[i], G2[i], G3[i]),
+                    'G0_val': G0[i],
+                    'G1_val': G1[i],
+                    'G2_val': G2[i],
+                    'G3_val': G3[i]
                 }
             }
         );
@@ -80,7 +80,7 @@ function build_edges(sources, targets, energy_forward, energy_backward, R1, R2, 
         //                'weight': energy_backward[i],
         //                'energy_forward': energy_forward[i],
         //                'energy_backward': energy_backward[i],
-        //                'classes': edge_class_name(R1[i], R2[i], R3[i], R4[i])
+        //                'classes': edge_class_name(G0[i], G1[i], G2[i], G3[i])
         //            }
         //        }
         //    );
@@ -148,24 +148,24 @@ function filter_edges() {
 
     /* 
         Check which filters are enabled, if the checkbox in the UI is clicked
-        (boolean variable R1Included) then add it to 'cytoscape_edges' variable
+        (boolean variable G0Included) then add it to 'cytoscape_edges' variable
     */
 
     for (var i = 0; i < dataset_edges.length; i++) {
 
-        if (R1Included && dataset_edges[i].data.classes.includes('R1 ')) {
+        if (G0Included && dataset_edges[i].data.classes.includes('G0 ')) {
             cytoscape_edges.push(dataset_edges[i]);
         }
 
-        if (R2Included && dataset_edges[i].data.classes.includes('R2 ')) {
+        if (G1Included && dataset_edges[i].data.classes.includes('G1 ')) {
             cytoscape_edges.push(dataset_edges[i]);
         }
 
-        if (R3Included && dataset_edges[i].data.classes.includes('R3 ')) {
+        if (G2Included && dataset_edges[i].data.classes.includes('G2 ')) {
             cytoscape_edges.push(dataset_edges[i]);
         }
 
-        if (R4Included && dataset_edges[i].data.classes.includes('R4 ')) {
+        if (G3Included && dataset_edges[i].data.classes.includes('G3 ')) {
             cytoscape_edges.push(dataset_edges[i]);
         }
 

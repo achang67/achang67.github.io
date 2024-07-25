@@ -20,24 +20,24 @@ function edge_color(weight) {
     }
 }
 
-function edge_class_name(R1, R2, R3, R4) {
+function edge_class_name(G0, G1, G2, G3) {
 
     var name = ''
 
-    if(R2 > 0) {
-        name += 'R2 ';
+    if(G1 > 0) {
+        name += 'G1 ';
     }
 
-    if(R3 > 0) {
-        name += 'R3 ';
+    if(G2 > 0) {
+        name += 'G2 ';
     }
 
-    if(R4 > 0) {
-        name += 'R4 ';
+    if(G3 > 0) {
+        name += 'G3 ';
     }
 
-    if(R1 > 0) {
-        name += 'R1 '
+    if(G0 > 0) {
+        name += 'G0 '
     }
 
     return name
@@ -178,20 +178,20 @@ function computed_style(selectedNode, selectedEdge) {
             //var weight = edge._private.data.weight;
             var occur = 0;
             var trajs = 1;
-            if (R1Included) {
-              occur += edge._private.data.R1_val;
+            if (G0Included) {
+              occur += edge._private.data.G0_val;
               trajs += 100
             } 
-            if (R2Included) {
-              occur += edge._private.data.R2_val;
+            if (G1Included) {
+              occur += edge._private.data.G1_val;
               trajs += 100
             } 
-            if (R3Included) {
-              occur += edge._private.data.R3_val;
+            if (G2Included) {
+              occur += edge._private.data.G2_val;
               trajs += 100
             } 
-            if (R4Included) {
-              occur += edge._private.data.R4_val;
+            if (G3Included) {
+              occur += edge._private.data.G3_val;
               trajs += 100
             } 
             var width = 50 * occur/trajs;
@@ -235,20 +235,20 @@ function computed_style(selectedNode, selectedEdge) {
         //    //var weight = edge._private.data.weight;
         //    //var occur = 0;
         //    //var trajs = 1;
-        //    //if (R1Included) {
-        //    //  occur += edge._private.data.R1_val;
+        //    //if (G0Included) {
+        //    //  occur += edge._private.data.G0_val;
         //    //  trajs += 100
         //    //} 
-        //    //if (R2Included) {
-        //    //  occur += edge._private.data.R2_val;
+        //    //if (G1Included) {
+        //    //  occur += edge._private.data.G1_val;
         //    //  trajs += 100
         //    //} 
-        //    //if (R3Included) {
-        //    //  occur += edge._private.data.R3_val;
+        //    //if (G2Included) {
+        //    //  occur += edge._private.data.G2_val;
         //    //  trajs += 100
         //    //} 
-        //    //if (R4Included) {
-        //    //  occur += edge._private.data.R4_val;
+        //    //if (G3Included) {
+        //    //  occur += edge._private.data.G3_val;
         //    //  trajs += 100
         //    //} 
         //    var width = 50 * occur/trajs;

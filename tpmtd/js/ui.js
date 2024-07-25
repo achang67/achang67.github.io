@@ -1,7 +1,7 @@
 
 function on_toggle_proportional_thickness(event) {
     proportional_thickness = cb_checked(event);
-    //R1Included = cb_checked(event)
+    //G0Included = cb_checked(event)
     filter_edges();
     update_graph_styles();
 }
@@ -99,26 +99,26 @@ function cb_checked(evt) {
     }
 }
 
-function on_toggle_R1(event) {
-    R1Included = cb_checked(event);
+function on_toggle_G0(event) {
+    G0Included = cb_checked(event);
     filter_edges();
     update_graph_styles();
 }
 
-function on_toggle_R2(event) {
-    R2Included = cb_checked(event);
+function on_toggle_G1(event) {
+    G1Included = cb_checked(event);
     filter_edges();
     update_graph_styles();
 }
 
-function on_toggle_R3(event) {
-    R3Included = cb_checked(event);
+function on_toggle_G2(event) {
+    G2Included = cb_checked(event);
     filter_edges();
     update_graph_styles();
 }
 
-function on_toggle_R4(event) {
-    R4Included = cb_checked(event);
+function on_toggle_G3(event) {
+    G3Included = cb_checked(event);
     filter_edges();
     update_graph_styles();
 }
@@ -192,6 +192,7 @@ function render_edge_sidebar() {
         if (tags[i] != '') {
             tag_html += '<span class="mol-badge new badge blue">' + tags[i] + '</span>';
         }
+
     };
     $('#edge-tag-container').html(tag_html);
     $('#edge-preview').show();

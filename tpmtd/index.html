@@ -19,19 +19,19 @@
                 <div class="card darken-1 bg-dark rounded">
                     <div class="card-content white-text">
                         <label class="force-option">
-                            <input onchange="on_toggle_R1(this)" type="checkbox" checked="checked" />
+                            <input onchange="on_toggle_G0(this)" type="checkbox" checked="checked" />
                             <span>G0</span>
                         </label>
                         <label class="force-option">
-                            <input onchange="on_toggle_R2(this)" type="checkbox" checked="checked" />
+                            <input onchange="on_toggle_G1(this)" type="checkbox" checked="checked" />
                             <span>G1</span>
                         </label>
                         <label class="force-option">
-                            <input onchange="on_toggle_R3(this)" type="checkbox" checked="checked" />
+                            <input onchange="on_toggle_G2(this)" type="checkbox" checked="checked" />
                             <span>G2</span>
                         </label>
                         <label class="force-option">
-                            <input onchange="on_toggle_R4(this)" type="checkbox" checked="checked" />
+                            <input onchange="on_toggle_G3(this)" type="checkbox" checked="checked" />
                             <span>G3</span>
                         </label>
                     </div>
@@ -202,10 +202,10 @@
         var cy;                         // Cytoscape instance
         var currentLayout = 'fcose';    // Which layout engine we are currently using, see styling.js -> LAYOUT_ENGINES for options
 
-        var R1Included = true;
-        var R2Included = true;
-        var R3Included = true;
-        var R4Included = true;
+        var G0Included = true;
+        var G1Included = true;
+        var G2Included = true;
+        var G3Included = true;
         var proportional_thickness = false;     // Proportional edge thickness (forward energy)
         var show_fw_bk = false;                 // Show forward AND backward edges
         var pathway_coloring = true;            // Color edges by pathway energy
@@ -247,10 +247,10 @@
                 Object.values(server_data['Node2']),
                 Object.values(server_data['Energy_forward (kcal/mol)']),
                 Object.values(server_data['Energy_backward (kcal/mol)']),
-                Object.values(server_data['R1']),
-                Object.values(server_data['R2']),
-                Object.values(server_data['R3']),
-                Object.values(server_data['R4']),
+                Object.values(server_data['G0']),
+                Object.values(server_data['G1']),
+                Object.values(server_data['G2']),
+                Object.values(server_data['G3']),
             );
         }
 
